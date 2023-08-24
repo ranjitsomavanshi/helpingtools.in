@@ -1,0 +1,9 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar.mat-warn{
+  background: #454945 !important;
+}
+.mat-drawer{
+  background: #8989891f !important;
+}

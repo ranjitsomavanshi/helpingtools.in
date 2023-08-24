@@ -1,0 +1,100 @@
+<mat-toolbar color="warn" class="mat-elevation-z8">
+  <button (click)="drawer.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+  </button>
+  <span><a routerLink="" style="text-decoration: none; color: aliceblue;" href="">HelpingTools.in</a></span>
+  <span class="example-spacer"></span>
+  <button routerLink="" mat-button>Home</button>
+  <button routerLink="about" [matMenuTriggerFor]="lvl1master" mat-button>About Us</button>
+  <mat-menu #lvl1master="matMenu">
+      <button routerLink="contact" mat-menu-item>Contact Us</button>
+      <button routerLink="privacy-policy" mat-menu-item>Privacy Policy</button>
+      <button routerLink="disclaimer" mat-menu-item>Disclaimer</button>
+      <button routerLink="terms-and-conditions" mat-menu-item>Terms And Conditions</button>
+  </mat-menu>
+
+  <a href="" mat-raised-button color="accent">Join Us</a>
+  <button (click)="badgevisibility()"  mat-icon-button>
+      <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible" matBadgeSize="small">notifications</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer opened="true" mode="side" position="start">
+  <mat-nav-list>
+      <!-- <mat-list-item>
+          <button routerLink="card" mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+      </mat-list-item> -->
+      <mat-list-item>
+          <button routerLink="" mat-button><mat-icon>home</mat-icon> Home</button>
+      </mat-list-item>
+      <mat-list-item>
+          <button routerLink="slider" mat-button><mat-icon>laptop_chromebook</mat-icon> Devloper Tools</button>
+      </mat-list-item>
+      <mat-list-item>
+          <button routerLink="calculators" mat-button><mat-icon>calculate</mat-icon> Calculators</button>
+      </mat-list-item>
+      <mat-list-item>
+          <button routerLink="downloaders" mat-button><mat-icon>download</mat-icon> Downloaders</button>
+      </mat-list-item>
+      <mat-list-item>
+          <button routerLink="instagram-tools" mat-button><mat-icon>public</mat-icon> Social Tools</button>
+      </mat-list-item>
+      <mat-list-item>
+          <button routerLink="seo-tools" mat-button><mat-icon>analytics</mat-icon> SEO Tools</button>
+      </mat-list-item>
+  </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+      <div style="text-align: center;min-height: 600px;">
+          <router-outlet></router-outlet>
+          </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">HelpingTools.in</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="instagram-tools" href="#">Instagram Tools</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="privacy-policy" href="#">Privacy Policy</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="disclaimer" href="#">Disclaimer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="terms-and-conditions" href="#">Terms and Conditions</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> -->
+ 
+ 
+  <!-- <div class="sidebar" [ngClass]="{'active': isSidebarOpen}">
+    <ul>
+      <li><a routerLink="" href="#">Home</a></li>
+      <li><a outerLink="instagram-tools" href="#">Instagram Tools</a></li>
+      <li><a routerLink="about" href="#">About</a></li>
+      <li><a routerLink="contact" href="#">Contact</a></li>
+      <li><a routerLink="privacy-policy" href="#">Privacy Policy</a></li>
+      <li><a routerLink="disclaimer" href="#">Disclaimer</a></li>
+      <li><a routerLink="terms-and-conditions" href="#">Terms and Conditions</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <button (click)="toggleSidebar()">Toggle Sidebar</button>
+  </div>
+   -->
