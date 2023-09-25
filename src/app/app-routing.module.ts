@@ -7,6 +7,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
 import { DisclaimerComponent } from './components/disclaimer/disclaimer.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { JsonToolsComponent } from './components/tools/json-tools/json-tools.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     component:TermsAndConditionsComponent,
     path:'terms-and-conditions'
+  },
+  {
+    component:JsonToolsComponent,
+    path:'json-viwer'
   }
 ];
 
