@@ -1,50 +1,13 @@
-<!-- <ace-editor [(text)]="code" mode="json" style="height:400px;"></ace-editor> -->
-<mat-grid-list cols="3" rowHeight="2:1">
-    <mat-grid-tile> <ngx-json-viewer [json]="data"></ngx-json-viewer> </mat-grid-tile>
-    <mat-grid-title> 
-      <div class="NgxEditor__Wrapper">
-        <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
-        <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" [placeholder]="'Type here...'"></ngx-editor>
-      </div></mat-grid-title>
-    </mat-grid-list>
-<!-- <ul *ngFor="let someObj of data1;">
-    <ng-container *ngTemplateOutlet="objectTemplate; context: {obj: someObj}"></ng-container>
-  </ul>
-  
-  
-  <ng-template #recursiveTemplate let-key="key" let-valueType="valueType" let-value="value">
-    {{key}}
-  
-    <ng-container [ngSwitch]="valueType">
-  
-        <ng-container *ngSwitchCase="'array'">
-          <ng-container *ngTemplateOutlet="arrayTemplate; context: { value: value}"></ng-container>
-        </ng-container>
-  
-        <ng-container *ngSwitchCase="'object'">
-          <ul>
-          <ng-container *ngTemplateOutlet="objectTemplate; context: {obj: value}"></ng-container>
-          </ul>
-        </ng-container> -->
-  
-        <!-- anything we might have missed or don't needs anything special for, just show it as JSON -->
-        <!-- <ng-container *ngSwitchDefault>
-           {{key ? "- " : ""}}{{value | json}}
-        </ng-container>
-  
-    </ng-container>
-  </ng-template>
-  
-  <ng-template #arrayTemplate let-value="value">
-    <ul>
-      <li *ngFor="let child of value;">
-          <ng-container *ngTemplateOutlet="recursiveTemplate; context:{ key:null, valueType: getType(child), value: child }"></ng-container>
-      </li>
-    </ul>
-  </ng-template>
-  
-  <ng-template #objectTemplate let-obj="obj">
-    <li *ngFor="let item of obj | keyvalue;">
-    <ng-container *ngTemplateOutlet="recursiveTemplate; context:{ key:item.key, valueType: getType(item.value), value: item.value }"></ng-container>
-    </li>
-  </ng-template> -->
+<div class="row-container">
+    <div class="editor-container">
+    <h2>JSON Editor</h2>
+    <textarea class="textarea" [formControl]="editorForm" (input)="onEditorContentChange($event)">{{editorContent}}</textarea>
+    </div>
+
+    <div class="viewer-container">
+        <h2>JSON Viewer</h2>
+        <div class="scrollable-json-viewer left-align-json-viewer ">
+          <ngx-json-viewer [json]="jsonToDisplay"></ngx-json-viewer>
+        </div>
+      </div>
+</div>

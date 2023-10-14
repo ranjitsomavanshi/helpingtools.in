@@ -18,9 +18,23 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MaterialModule } from './material-module';
 import { JsonToolsComponent } from './components/tools/json-tools/json-tools.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+// import { NgxJsonViewerModule } from 'ngx-json-viewer';
+// import { NgxEditorModule } from 'ngx-editor';
+// import { AceEditorModule } from 'ng2-ace-editor';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { NgxEditorModule } from 'ngx-editor';
-// import { AceEditorModule } from 'ng2-ace-editor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+// @NgModule({
+//   // ...
+//   imports: [
+//     // ...
+//     FormsModule,
+//     ReactiveFormsModule,
+//   ],
+//   // ...
+// })
+
 
 @NgModule({
   declarations: [
@@ -44,7 +58,9 @@ import { NgxEditorModule } from 'ngx-editor';
     MaterialModule,
     MatGridListModule,
     NgxJsonViewerModule,
-    NgxEditorModule
+    NgxEditorModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,68 @@
-p {
-    font-family: Lato;
-  }
+/* Style for the main row container */
+.row-container {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping if the content overflows */
+  margin: 20px;
+}
+
+/* Style for the JSON editor container */
+.editor-container {
+  flex: 1; /* Grow to fill available space */
+  margin-right: 10px; /* Add some spacing between containers */
+  border: 1px solid #7f7878;
+  border-radius: 5px;
+}
+
+.textarea{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Style for the JSON viewer container */
+.viewer-container {
+  flex: 1; /* Grow to fill available space */
+  border: 1px solid #494646;
+  border-radius: 5px;
+}
+
+/* Style for the title and JSON data */
+h2, h3 {
+  color: #333;
+}
+
+/* Style for the JSON editor textarea */
+.editor-container textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: monospace; /* Use a monospace font for JSON content */
+  font-size: 14px;
+}
+
+/* Style for the JSON viewer */
+.viewer-container pre {
+  background-color: #fff;
+  border: 1px solid #c4bbbb;
+  border-radius: 5px;
+  padding: 10px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+/* Add some margin between the viewer title and the JSON data
+.viewer-container h3 {
+  margin-bottom: 10px;
+} */
+/* Scrollable JSON viewer */
+.scrollable-json-viewer {
+  max-height: 300px; /* Set a maximum height to enable scrolling */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+}
+
+.left-align-json-viewer {
+  text-align: left;
+}
