@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     component:InstagramToolsComponent,
-    path:'instagram-tools'
+    path:'instagram-tool'
   },
   {
     component:AboutComponent,
